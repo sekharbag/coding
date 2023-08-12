@@ -3,18 +3,14 @@
 #include<string.h>
 #include<climits>
 using namespace std;
-int  sum(vector<int>&v,int i,int idx,int target)
+void   reverse(vector<int>&v,int idx)
 {
+if(idx<0)
+return;
+cout<<v[idx]<<" ";
+cout<<endl;
+reverse(v,idx-1);
 
-  if(i==v.size())
-  {
-    return idx;
-  }
-  if(v[i]==target){
-  idx=i;
-  return idx;
-  }
-  return sum(v,i+1,idx,target);
 }
 int main()
 {  
@@ -22,7 +18,8 @@ vector<int>v;
 v.push_back(4);
 v.push_back(-1);
 v.push_back(10);
-cout<<sum(v,0,-1,10);
+int size=v.size()-1;
+reverse(v,size);
 
 
 
