@@ -7,7 +7,6 @@ void subset(string original,string derived)
 {
 
     if(original.length()==0){
-    //  v.push_back(derived);
       cout<<derived<<endl;
     return;
     }
