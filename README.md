@@ -3,7 +3,7 @@
 
 - 🔭 I’m currently working on [DSA](https://github.com/sekharbag/coding)
 
-- 🌱 I’m currently learning **DSA**
+- 🌱 I’m currently learning **DSA and back end development**
 
 - 👨‍💻 All of my projects are available at [https://github.com/sekharbag/coding](https://github.com/sekharbag/coding)
 
