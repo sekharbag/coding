@@ -28,16 +28,16 @@ void subset(vector<vector<int>>&v1,vector<int>&v,vector<int> &v2,int i)
 int main()
 {  
 vector<int>v;
-v.push_back(-1);
- v.push_back(-2);
+v.push_back(1);
+ v.push_back(2);
 // v.push_back(3);
 // v.push_back(4);
 
 vector<vector<int>>v1;
 vector<int>v2;
 subset(v1,v,v2,0);
-string str=typeid(""). name();
-if(str=="i")
-cout<<typeid(-2). name();
+// string str=typeid(""). name();
+// if(str=="i")
+// cout<<typeid(-2). name();
 
 }

@@ -4,40 +4,38 @@
 using namespace std;
 
 int main()
-{  
-string str="PAYPALISHIRINGAB";
-string v[4][8];
-
-for(int i=0;i<4;i++)
+{  int numRows=2;
+string str="ABc";
+string v[numRows][str.length()];
+for(int i=0;i<numRows;i++)
 {
-for(int j=0;j<6;j++)
+for(int j=0;j<str.length();j++)
 {
    v[i][j]="*";
 }
-
 }
+
 int count=0;
 int i=0;
  v[0][0]=str[count];
    count++;
-while(i<6)
+while(i<str.length()&&count<str.length())
 {
-for(int j=1;j<4;j++)
+for(int j=1;j<numRows&&count<str.length();j++)
 {
     v[j][i]=str[count];
     count++;
 }
-++i;
-for(int j=2;j>=0;j--)
+i++;
+for(int k=numRows-2;k>=0&&count<str.length();k--)
 {   
-v[j][i]=str[count];
+v[k][i]=str[count];
 count++;
-++i;
+i++;
 }
 i--;
 
 }
-
 for(int i=0;i<4;i++)
 {
 for(int j=0;j<8;j++)
@@ -46,14 +44,26 @@ for(int j=0;j<8;j++)
 }
 cout<<endl;
 }
-// string str2="";
-// for(int i=0;i<4;i++)
-// {
-//    for(int j=0;j<8;j++)
-//    {
-//       if(v[i][j]!="*")
-//       str2=str2+v[i][j];
-//    }
-// }
-// cout<<str2;
+string str2="";
+for(int i=0;i<numRows;i++)
+{
+   for(int j=0;j<str.length();j++)
+   {
+      if(v[i][j]!="*")
+      str2=str2+v[i][j];
+   }
 }
+cout<<str2;
+}
+
+
+
+
+
+
+
+
+
+
+
+
