@@ -1,7 +1,6 @@
 #include<iostream>
 #include<vector>
 using namespace std;
-    int c=0;
 void merge(vector<int>&a,vector<int>&b,vector<int>&v)
 {
     int i=0;
@@ -61,25 +60,6 @@ for(int i=0;i<b.size();i++)
 }
 mergesort(a);
 mergesort(b);
-int i=0;
-int j=0;
-int co=0;
-while(i<a.size()&&j<b.size())
-{
-    if(a[i]>b[j]) 
-    {
-     c++;
-     co++;
-     j++;
-    }
-    else{
-    if(i+1<a.size()){
-    c=c+co;
-    co=0;
-    }
-    i++;
-    }
-}
 merge(a,b,v);
 a.clear();
 b.clear();
@@ -89,12 +69,13 @@ int main()
     vector<int>v;
     v.push_back(5);
     v.push_back(1);
-    v.push_back(8);
-    v.push_back(2);
     v.push_back(3);
-   v.push_back(9);
+    v.push_back(0);
+    v.push_back(4);
+    v.push_back(9);
     v.push_back(6);
-     v.push_back(4);
     mergesort(v);
-    cout<<c;
+    for(int i=0;i<v.size();i++)
+    cout<<v[i]<<" ";
+    
 }
