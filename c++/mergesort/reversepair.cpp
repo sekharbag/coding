@@ -1,7 +1,23 @@
-
 #include<iostream>
 #include<vector>
 using namespace std;
+    int c=0;
+    int inversion(vector<int>a,vector<int>b)
+    {
+        int i=0,j=0;
+        int ci=0;
+        while(i<a.size()&&j<b.size())
+        { long long int ai=a[i];
+    long long int bi=b[j];
+    if(a[i]>(2*bi)) 
+            {
+           ci=ci+(a.size()-i);
+           j++;
+            }
+            else i++;
+        }
+   return ci;
+    }
 void merge(vector<int>&a,vector<int>&b,vector<int>&v)
 {
     int i=0;
@@ -61,6 +77,7 @@ for(int i=0;i<b.size();i++)
 }
 mergesort(a);
 mergesort(b);
+c+=inversion(a,b);
 merge(a,b,v);
 a.clear();
 b.clear();
@@ -69,14 +86,13 @@ int main()
 {
     vector<int>v;
     v.push_back(5);
-    v.push_back(1);
-    v.push_back(3);
-    v.push_back(0);
     v.push_back(4);
-    v.push_back(9);
-    v.push_back(6);
+    v.push_back(3);
+    v.push_back(2);
+    v.push_back(1);
+    // v.push_back(1);
     mergesort(v);
-    for(int i=0;i<v.size();i++)
-    cout<<v[i]<<" ";
-    
+    cout<<c;
 }
+
+
