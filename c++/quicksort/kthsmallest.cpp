@@ -35,13 +35,16 @@ while(i<pi&&j>pi)
 }
 return pi;
 }
-void quicksort( vector<int>&v,int si,int ei)
+int  quicksort( vector<int>&v,int si,int ei,int k)
 {
-    if(si>=ei)
-    return;
 int pi=partition(v,si,ei);
-quicksort(v,si,pi-1);
-quicksort(v,pi+1,ei);
+if(pi+1==k)
+return v[pi];
+else if(pi+1>k){
+return quicksort(v,si,pi-1,k);
+}
+else 
+return quicksort(v,pi+1,ei,k);
 
 }
 int main()
@@ -55,9 +58,10 @@ int main()
     v.push_back(6);
     v.push_back(3);
     v.push_back(4);
-    quicksort(v,0,v.size()-1);
-   for(int i=0;i<v.size();i++)
-   cout<<v[i]<<" ";
+    cout<<quicksort(v,0,v.size()-1,6)<<endl;
+    for(int i=0;i<v.size();i++)
+    cout<<v[i]<<" ";
+
 }
 
 
