@@ -1,12 +1,20 @@
 #include<iostream>
 using namespace std;
-int maze(int sr,int sc,int er,int ec)
+  int sum=0;
+void  total_path(int m,int n,int r,int d,string ri,string down)
 {
-    if(sc>ec||sr>er) return 0;
-    else if(sc==ec&&sr==er) return 1;
-    return maze(sr,sc+1,er,ec)+maze(sr+1,sc,er,ec);
+   if(r>n||d>m)
+   return;
+   if(r==n&&d==m){
+   sum=sum+1;
+   return ;
+   }
+    total_path(m,n,r+1,d,ri+"R",down);
+     total_path(m,n,r,d+1,ri,down+"D");
+
 }
 int main()
 {
-cout<<maze(0,0,2,2);
+ total_path(2,1,0,0,"","");
+        cout<< sum;
 }

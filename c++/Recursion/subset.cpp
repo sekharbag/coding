@@ -6,7 +6,7 @@ void subset(string original,string derived)
 {
     char ch=original[0];
     if(original==""){
-    // cout<<derived<<endl;
+     cout<<derived<<endl;
     return;
     }
     subset(original.substr(1),derived+ch);

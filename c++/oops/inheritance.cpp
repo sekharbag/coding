@@ -19,6 +19,7 @@ class vechile{
 class car:public vechile{
     public:
     int steeringsize;
+    
 };
 //car is a child of vechile
 //vechile parent class ; car,bike is derived class;
@@ -45,6 +46,7 @@ class B:public  A{//b_ka_public-->public // a_ka_public,a_ka_protaced as protact
     {
        a_ka_protected=10;
        cout<<a_ka_protected;
+       
     }
       B(){
         cout<<"b ka constructor"<<endl;

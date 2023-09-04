@@ -69,9 +69,9 @@ class D:public B,public C{ //c_ka_public as pu// a_ka_public ,a_ka_proacted  as 
         cout<<B::a_ka_public<<endl;
 
     }
-}
-
 };
+
+
 
 
 int main()
