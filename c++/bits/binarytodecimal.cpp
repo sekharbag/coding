@@ -5,7 +5,7 @@
 using namespace std;
 int main()
 {
-int a=18;
+int a=234;
 string str="";
 while(a>0)
 {
@@ -13,7 +13,7 @@ while(a>0)
     str='0'+str;
     else 
     str='1'+str;
-    a=a/2;
+    a=a>>1;
 }
 cout<<str;
 }

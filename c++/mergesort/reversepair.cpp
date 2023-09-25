@@ -7,7 +7,8 @@ using namespace std;
         int i=0,j=0;
         int ci=0;
         while(i<a.size()&&j<b.size())
-        { long long int ai=a[i];
+        { 
+            long long int ai=a[i];
     long long int bi=b[j];
     if(a[i]>(2*bi)) 
             {

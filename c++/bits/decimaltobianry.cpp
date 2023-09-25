@@ -5,7 +5,7 @@
 using namespace std;
 int main()
 {
-string str="10010";
+string str="11101010";
 int result=0;
 for(int i=str.size()-1;i>=0;i--)
 {

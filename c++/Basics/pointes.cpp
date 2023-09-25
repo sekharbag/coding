@@ -7,7 +7,7 @@ int main(){
     int *y=&x;
     *y=*y+1;
     cout<<&x<<endl;
-    cout<<*y<<x<<endl;
+    cout<<*y<<" "<<x<<endl;
     int *m=new int (5);
     cout<<m;
 }
