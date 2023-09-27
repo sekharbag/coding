@@ -92,15 +92,12 @@ size++;
 int main()
 {
     LinkedList ll;
-    // cout<<ll.size<<endl;
     ll.insertAtEnd(10);
     ll.insertAtEnd(20);
     ll.insertAtEnd(30);
     ll.insertAtEnd(40);
-        cout<<ll.size<<endl;
+    ll.insertAtIndex(130,3);
     ll.display();
-    // ll.insertAtHead(20);
-    ll.insertAtIndex(130,3);//20->10->20->30->40//20->10->30->130->40
     cout<<ll.size<<endl;
-    ll.display();
+
 }
