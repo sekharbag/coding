@@ -88,6 +88,62 @@ temp->next=t;
 size++;
 }
 }
+int getAtIdx(int idx)
+{
+Node *temp=head;
+int count=0;
+while(count!=idx)
+{
+count++;
+temp=temp->next;
+}
+return temp->val;
+}
+void deleteathead()
+{
+    if(size>1)
+    {
+        head=head->next;
+    size--;
+    return;}
+    if(size==1)
+    {
+        head=tail=NULL;
+        size--;
+        return;
+    }
+}
+void deleteatTail()
+{
+    Node *temp=head;
+    while(temp->next!=tail)
+    {
+        temp=temp->next;
+    }
+    temp->next=NULL;
+    size--;
+}
+void deleteatidx(int idx)
+{
+    if(idx==size-1){
+    deleteatTail();
+    return;
+    }
+if(idx==0)
+{
+    deleteathead();
+    return;
+}
+else{
+    Node *temp=head;
+    for(int i=1;i<=idx-1;i++)
+    {
+        temp=temp->next;
+    }
+    temp->next=temp->next->next;
+    size--;
+}
+}
 };
 int main()
 {
@@ -97,7 +153,8 @@ int main()
     ll.insertAtEnd(30);
     ll.insertAtEnd(40);
     ll.insertAtIndex(130,3);
+    ll.deleteathead();
+    ll.deleteatTail();
     ll.display();
     cout<<ll.size<<endl;
-
 }

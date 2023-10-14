@@ -17,19 +17,7 @@ int main()
     cout<<endl;
 for(int i=1;i<v.size();i++)
 {
-    // int element=v[i];
-    // int idx=i;
-    // int count =0;
-    // for(int j=i-1;j>=0;j--)
-    // {
-    //     if(element<v[j])
-    //     {
-    //     swap(v[idx],v[j]);
-    //     count++;
-    //     idx=i-count;
-    //     }
-    //     else break;
-    // }  
+    
     int j=i;
     // while(j>=1)
     // {

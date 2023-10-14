@@ -5,6 +5,8 @@
 using namespace std;
 int main()
 {
+    char ch='1';
+    cout<<ch<<endl;
 string str="11101010";
 int result=0;
 for(int i=str.size()-1;i>=0;i--)
