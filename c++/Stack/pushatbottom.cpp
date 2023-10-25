@@ -10,6 +10,15 @@ pushatbottom(st,val);
 if(st.size()==0) st.push(val);
 st.push(x);
 }
+void reverse(stack<int>&st)
+{
+if(st.size()==1)
+return;
+int x=st.top();
+st.pop();
+reverse(st);
+pushatbottom(st,x);
+}
 int main()
 {
 stack<int>st;
@@ -17,7 +26,7 @@ stack<int>helper;
 st.push(10);
 st.push(20);
 st.push(40);
-pushatbottom(st,123);
+reverse(st);
 // while(st.size()>0)
 // {
 //     helper.push(st.top());
