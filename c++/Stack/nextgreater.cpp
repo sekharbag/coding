@@ -14,7 +14,7 @@ int main()
     v.push_back(4);
     v.push_back(8);
     v.push_back(2);
-       v.push_back(7);
+    v.push_back(7);
     vector<int>nge(v.size(),-1);
     stack<int>st;
     st.push(v[v.size()-1]);
