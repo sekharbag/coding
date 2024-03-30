@@ -7,6 +7,8 @@ void  pip(int n)
     pip(n-1);
     cout<<"In"<<n<<endl;
     pip(n-1);
+    cout<<"Post"<<n<<endl;
+
    
 }
 int main()

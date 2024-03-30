@@ -5,15 +5,14 @@
 using namespace std;
 int main()
 {
-int a=234;
-string str="";
-while(a>0)
+string str="00000000000000000000000000001011";
+int result=0;
+int n=str.size();
+for(int i=str.size()-1;i>=0;i--)
 {
-    if(a%2==0)
-    str='0'+str;
-    else 
-    str='1'+str;
-    a=a>>1;
+    char ch=str[i];
+    // result+=(ch-48)*pow(2,(n-i-1));
+    result+=(ch-48)*(1<<(n-i-1));
 }
-cout<<str;
+cout<<result<<endl;
 }

@@ -21,6 +21,8 @@ pre[0]=v[0];
     for(int i=1;i<v.size();i++)
    pre[i]=v[i]+pre[i-1];
    
+  cout<<endl;
+   
    bool flag=false;
    int idx=-1;
    for(int i=1;i<pre.size();i++)

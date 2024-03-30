@@ -24,7 +24,7 @@ void subset(string original,string derived)
 }
 int main()
 {  
-string str="abc";
+string str="123";
 // vector<string>v;
  subset(str,"");
 

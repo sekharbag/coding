@@ -2,7 +2,7 @@
 using namespace std;
 class Stack
 {
-  public  :
+public  :
  int arr[5];
  int idx;
  Stack(int idx){

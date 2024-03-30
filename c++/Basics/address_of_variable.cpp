@@ -1,5 +1,8 @@
 #include<iostream>
+#include<string>
 using namespace std;
 int main(){
-   cout<<10/10;
+   bool a=1;
+   bool b=0;
+   cout<<(a&&b);
 }

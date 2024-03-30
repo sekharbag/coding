@@ -22,6 +22,6 @@ int stair(int a,int b)
 }
 int main()
 {
-cout<<stair(0,4)<<endl;
-cout<<stair(14);
+cout<<stair(0,3)<<endl;
+cout<<stair(3);
 }

@@ -24,10 +24,10 @@ void subset(string original,string derived,int i,vector<string>&v)
 }
 int main()
 {  
-string str="abc";
+string str="ab";
 vector<string>v;
 subset(str,"");
-subset(str,"",0,v);
+// subset(str,"",0,v);
 // for(int i=0;i<v.size();i++)
 // {
 //     cout<<v[i]<<endl;
