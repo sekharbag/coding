@@ -74,7 +74,7 @@ class Node
         e->left=g;
         e->right=h;
         c->right=f;
-       levelordertraversal(a);
+        levelordertraversal(a);
         printtopview(a);
         cout<<endl;
    
