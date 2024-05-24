@@ -1,3 +1,4 @@
+// line 205 notes
 #include <bits/stdc++.h>
 using namespace std;
 int counsteps(int n, vector<int> &dp)
@@ -24,12 +25,34 @@ int counsteps(int n, vector<int> &dp)
     c = 1 + counsteps(n - 1, dp);
     return dp[n] = min(min(a, b), c);
 }
+int ftd(int n, vector<int> &dp)
+{
+    dp[1] = 0;
+    for (int i = 1; i <= n; i++)
+    {
+        int a = INT_MAX;
+        int b = INT_MAX;
+        int c = INT_MAX;
+        if (i % 2 == 0)
+        {
+            a = dp[i / 2];
+        }
+        else if (i % 3 == 0)
+        {
+            b = dp[i / 3];
+        }
+        c = dp[i - 1];
+        dp[i] = 1+min(min(a, b), c);
+    }
+    return dp[n];
+}
 int main()
 {
     cout << "input n : ";
     int n;
     cin >> n;
-    int max_count = INT_MAX;
     vector<int> dp(n + 1, -1);
-    cout << counsteps(n, dp);
+     cout << counsteps(n, dp);
+     cout<<endl;
+    cout<<ftd(n,dp);
 }
