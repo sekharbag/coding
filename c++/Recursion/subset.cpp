@@ -19,19 +19,19 @@ void subset(string original,string derived,int i,vector<string>&v)
      v.push_back(derived);
     return;
     }
-    subset(original,derived+original[i],i+1,v);
+     subset(original,derived+original[i],i+1,v);
      subset(original,derived,i+1,v);
 }
 int main()
 {  
-string str="ab";
+string str="abc";
 vector<string>v;
-subset(str,"");
-// subset(str,"",0,v);
-// for(int i=0;i<v.size();i++)
-// {
-//     cout<<v[i]<<endl;
-// }
+//subset(str,"");
+ subset(str,"",0,v);
+for(int i=0;i<v.size();i++)
+{
+    cout<<v[i]<<endl;
+}
 
 
 }
