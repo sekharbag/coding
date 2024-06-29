@@ -18,8 +18,8 @@ for(int i=0;i<n;i++)
         int ans;
       while(hi>=low)
         {
-            mid=(hi+low)/2;
-            if(nums[mid]==mid) low=mid+1;
+                mid=(hi+low)/2;
+                if(nums[mid]==mid) low=mid+1;
             else 
            {
                 ans =mid;
@@ -29,11 +29,5 @@ for(int i=0;i<n;i++)
         cout<<ans;
 
 }
-
-                   
-                
-             
-
-
 
 //1 2 2 3 3 3 3 3 4 4 5 8 9 
